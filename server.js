@@ -16,6 +16,7 @@ const connectToDB = require('./src/db/db-connect.js') //connect to db
 const indexRouter = require('./src/routes/indexRouter.js')
 const apiRouter = require('./src/routes/apiRouter.js')
 
+const { render404 } = require('./src/helpers/errorHandlers')
 
 // =========
 // RUN APP
@@ -53,6 +54,8 @@ app.use( express.static( `${__dirname}/dist`) );
 app.use('/', indexRouter)
 app.use('/api', apiRouter)
 
+
+app.use(render404)
 
 //---------------------
 //EXECUTION SCRIPTS
