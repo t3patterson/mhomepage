@@ -1,12 +1,23 @@
+@import '../../../node_modules/margo-css/margo.scss';
+$muktek-blue: #2C3D89;
+
 * {
 	box-sizing: border-box;
+	outline: 1px solid rgba(200,200,100,.4);
 }
 
 body{
-	background: lightgreen;
 }
 
 img {
 	width: 100%;
 	display: block;
+}
+
+.hero--landing{
+	background: $muktek-blue;
+	color: #fff;
+	min-height: 420px;
+	height: 80vh;
+	background: url('../images/landing-img.jpg');
 }

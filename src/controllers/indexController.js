@@ -1,11 +1,15 @@
 const axios = require('axios');
 
 function getIndex (req, res){
-	res.render('index')
+	res.render('index', {
+		pageName: 'Home'
+	})
 }
 
 function getAbout (req, res){
-	res.render('about')
+	res.render('about', {
+		pageName: 'About'
+	})
 }
 
 function makeProxyRequest(req, res) {
