@@ -5,6 +5,7 @@
 .major-product__title{
 	color: $muktek-blue;
 	font-weight: 700;
+
 }
 
 .major-product__title_alt{
@@ -13,14 +14,20 @@
 }
 
 
+
 .major-product__img {
 	padding: 0 20px;
 	opacity: .5;
 }
 
 .major-product__copy{
-	padding: 20px;
+	padding: 10px 20px;
 }
+	.major-product__benefit{
+		margin-top: 0;
+		margin-bottom: .5rem;
+		color: $gray-dark;
+	}
 	.major-product__benefit-desc{
 		@include fontformat-small();
 	}

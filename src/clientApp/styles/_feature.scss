@@ -13,6 +13,10 @@
 	text-align: center;
 }
 
+	.feature__title--compact{
+		margin: 1rem 0 .25rem 0;
+	}
+
 .feature__desc{
 	@include fontformat-small($gray-med);
 	text-align: center;

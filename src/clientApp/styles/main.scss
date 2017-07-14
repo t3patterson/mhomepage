@@ -33,6 +33,12 @@ $black: #333333;
 	padding: 0 40px;
 }
 
+@mixin mediaquery($size){
+	@media screen and (min-width: $size){
+		@content;
+	}
+}
+
 html{
 	font-size: 18px;
 }
@@ -59,11 +65,29 @@ img {
 	display: block;
 }
 
+button.button--basic{
+	background: rgba(0,0,0,0);
+	border-color: $gray-dark;
+	border-width: 1px;
+	color: $gray-dark;
+
+	&:hover{
+		background: $muktek-coolblue;
+		color: $gray-dark;
+		border-color: $gray-dark;
+	}
+}
+
 button.button--transparent{
 	background: rgba(0,0,0,0);
 	border-color: #fff;
 	border-width: 1px;
 	color: #fff;
+	&:hover{
+		background: $muktek-coolblue;
+		color: $gray-dark;
+		border-color: $gray-dark;
+	}
 }
 
 button.button--c2a{
@@ -85,7 +109,7 @@ button.button--alt{
 	border-color: #fff;
 	border-width: 1px;
 	color: #fff;
-	
+
 	&:hover{
 		background: $muktek-coolblue;
 		color: $gray-dark;
@@ -99,3 +123,4 @@ button.button--alt{
 @import './section';
 @import './section';
 @import './major-product';
+@import './testimonial';

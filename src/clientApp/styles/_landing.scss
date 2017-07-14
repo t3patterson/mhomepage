@@ -55,6 +55,7 @@
 	.hero--landing__newsletter-form {
 		background: $gray-light;
 		padding: 2rem;
+		line-height: 0;
 	}
 
 		input.hero--landing__newsletter-form-input{
@@ -68,7 +69,6 @@
 			background: $gray-feint;
 			height: 5rem;
 			color: $gray-dark;
-			line-height: 0;
 		}
 
 

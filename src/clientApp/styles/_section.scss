@@ -7,8 +7,14 @@
 	background: $gray-feint;
 }
 
+
 .section__inner{
 	@include inner-container();
+}
+
+.section__inner--testimonial-box{
+	position: relative;
+	max-width: 800px;
 }
 
 .section__title{
