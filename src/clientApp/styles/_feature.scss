@@ -1,0 +1,19 @@
+
+.feature{
+	padding: 20px;
+}
+
+.feature__icon{
+	max-width: 80px;
+	margin: 0 auto;
+}
+
+.feature__title{
+	color: $gray-dark;
+	text-align: center;
+}
+
+.feature__desc{
+	@include fontformat-small($gray-med);
+	text-align: center;
+}

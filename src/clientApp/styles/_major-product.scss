@@ -1,0 +1,26 @@
+.major-product__header{
+	margin-top: 2rem;
+}
+
+.major-product__title{
+	color: $muktek-blue;
+	font-weight: 700;
+}
+
+.major-product__title_alt{
+	color: $muktek-orange;
+	font-weight: 700;
+}
+
+
+.major-product__img {
+	padding: 0 20px;
+	opacity: .5;
+}
+
+.major-product__copy{
+	padding: 20px;
+}
+	.major-product__benefit-desc{
+		@include fontformat-small();
+	}

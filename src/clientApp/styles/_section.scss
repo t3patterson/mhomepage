@@ -1,0 +1,25 @@
+
+.section{
+	padding: 30px;
+}
+
+.section--featured {
+	background: $gray-feint;
+}
+
+.section__inner{
+	@include inner-container();
+}
+
+.section__title{
+	@include fontformat-headtitle();
+	text-align: center;
+}
+
+.section__title-divider	{
+	width: 100px;
+	margin: 0 auto;
+	height: 1px;
+	margin-bottom: 1rem;
+	background-color: $gray-med;
+}

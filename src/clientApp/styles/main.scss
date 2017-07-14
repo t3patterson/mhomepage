@@ -1,22 +1,57 @@
 @import '../../../node_modules/margo-css/margo.scss';
-$muktek-blue: #2C3D89;
+$muktek-blue: rgba(56,65,125,1);
+$muktek-coolblue: #DEE0EA;
+$muktek-orange: #ff8921;
+$gray-feint: #f8f8f8;
+$gray-light: #eee;
 $gray-med: #aaaaaa;
-$gray-dark: #333333;
+$gray-dark: #666;
+$black: #333333;
 
-@mixin fontformat-thin($color: $gray-med, $size: .875rem ){
+@mixin absolute-center(){
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin fontformat-small($color: $gray-med){
 	color: $color;
-	font-size: $size;
+	font-size: .875rem;
 	font-weight: 300;
+}
+
+@mixin fontformat-headtitle($color: $gray-dark){
+	color: $color;
+	font-weight: 200;
+}
+
+@mixin inner-container($size: 1200px){
+	max-width: $size;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1100px;
+	padding: 0 40px;
+}
+
+html{
+	font-size: 18px;
 }
 
 * {
 	box-sizing: border-box;
-	outline: 1px solid rgba(200,200,100,.4);
+	// outline: 1px solid rgba(200,200,100,.4);
 }
 
+button, input, select, textarea{
+	font-family: inherit;
+}
 
 body{
 	font-family: 'Montserrat';
+}
+
+object{
+	display: block;
 }
 
 img {
@@ -24,67 +59,43 @@ img {
 	display: block;
 }
 
-
-
-.hero--landing{
-	background: $muktek-blue;
+button.button--transparent{
+	background: rgba(0,0,0,0);
+	border-color: #fff;
+	border-width: 1px;
 	color: #fff;
-	min-height: 420px;
-	height: 80vh;
-	background: url('../images/landing-img.jpg');
-	background-size: cover;
 }
 
-	.M-grid > .hero--landing__col-about{
-		vertical-align: middle;
-		padding: 1rem;
+button.button--c2a{
+	background: $muktek-blue;
+	border-color: #fff;
+	border-width: 1px;
+	color: #fff;
+
+	&:hover{
+		background: $muktek-coolblue;
+		color: $gray-dark;
+		border-color: $gray-dark;
 
 	}
+}
 
+button.button--alt{
+	background: $muktek-orange;
+	border-color: #fff;
+	border-width: 1px;
+	color: #fff;
+	
+	&:hover{
+		background: $muktek-coolblue;
+		color: $gray-dark;
+		border-color: $gray-dark;
 
-	.hero--landing__title{
-		font-weight: 300;
 	}
+}
 
-	.hero--landing__blurb{
-		font-weight: 300;
-		@include fontformat-thin();
-	}
-
-	.M-grid > .hero--landing__col-newsletter{
-		vertical-align: middle;
-	}
-
-	.hero--landing__signup {
-		background: #fff;
-		color: #aaa;
-		padding: 1rem;
-	}
-
-		.hero--landing__signup-title {
-			font-weight: 400;
-			margin-top: .25rem;
-			margin-bottom: .75rem;
-		}
-
-		.hero--landing__signup-instructions {
-			margin: 0;
-			@include fontformat-thin();
-
-		}
-
-	.hero--landing__newsletter-form {
-		background: #ddd;
-		padding: 2rem;
-	}
-
-		input.hero--landing__newsletter-form-input{
-			@include fontformat-thin();
-			background: #eee;
-		}
-
-		textarea.hero--landing__newsletter-form-input{
-			@include fontformat-thin();
-			background: #eee;
-			height: 5rem;
-		}
+@import './landing';
+@import './feature';
+@import './section';
+@import './section';
+@import './major-product';

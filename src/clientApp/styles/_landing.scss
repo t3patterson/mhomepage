@@ -1,0 +1,81 @@
+.hero--landing {
+	position: relative;
+	background: $muktek-blue;
+	color: #fff;
+	height: 100vh;
+	min-height: 680px;
+	background: url('../images/landing-img.jpg');
+	background-size: cover;
+}
+
+	.hero--landing__inner {
+		@include inner-container();
+		@include absolute-center()
+	}
+
+
+	.M-grid > .hero--landing__col-about{
+		vertical-align: middle;
+		padding: 1rem;
+
+	}
+
+	.hero--landing__title{
+		@include fontformat-headtitle(#fff);
+	}
+
+	.hero--landing__blurb{
+		font-weight: 300;
+		@include fontformat-small();
+	}
+
+	.M-grid > .hero--landing__col-newsletter{
+		vertical-align: middle;
+	}
+
+	.hero--landing__signup {
+		background: #fff;
+		color: #aaa;
+		padding: 1rem;
+	}
+
+		.hero--landing__signup-title {
+			font-weight: 400;
+			margin-top: .25rem;
+			margin-bottom: .25rem;
+			color: $gray-dark;
+		}
+
+		.hero--landing__signup-instructions {
+			margin: 0;
+			@include fontformat-small();
+
+		}
+
+	.hero--landing__newsletter-form {
+		background: $gray-light;
+		padding: 2rem;
+	}
+
+		input.hero--landing__newsletter-form-input{
+			@include fontformat-small();
+			background: $gray-feint;
+			color: $gray-dark;
+		}
+
+		textarea.hero--landing__newsletter-form-input{
+			@include fontformat-small();
+			background: $gray-feint;
+			height: 5rem;
+			color: $gray-dark;
+			line-height: 0;
+		}
+
+
+.section{
+	padding: 30px;
+}
+
+.section__inner{
+	@include inner-container();
+}

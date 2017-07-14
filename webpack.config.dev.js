@@ -21,7 +21,7 @@ module.exports = {
 		 },
 	    {
 		    test: /\.scss$/,
-		    loader: "style-loader!css-loader!sass-loader!resolve-url-loader"
+		    loader: "style-loader!css-loader?sourceMap!sass-loader?sourceMap!resolve-url-loader"
 		 },
 		 {
 			 test: /\.(jpe?g|png|gif|svg)$/i,
