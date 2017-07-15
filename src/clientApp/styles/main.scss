@@ -56,6 +56,9 @@ body{
 	font-family: 'Montserrat';
 }
 
+#app-container{
+}
+
 object{
 	display: block;
 }
@@ -124,3 +127,5 @@ button.button--alt{
 @import './section';
 @import './major-product';
 @import './testimonial';
+@import './footer';
+@import './nav';

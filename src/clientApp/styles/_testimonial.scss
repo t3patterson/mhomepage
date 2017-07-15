@@ -22,6 +22,7 @@
 	&:nth-of-type(1){
 		bottom: 0;
 		right: 0;
+		z-index: 2;
 		&:checked ~ .testimonial-box .testimonial-1{
 			opacity: 1;
 		}
@@ -30,6 +31,7 @@
 	&:nth-of-type(2){
 		bottom: 0;
 		right: $size + 10px;
+		z-index: 3;
 		&:checked ~ .testimonial-box .testimonial-2{
 			opacity: 1;
 		}
@@ -38,6 +40,7 @@
 	&:nth-of-type(3){
 		bottom: 0;
 		right: $size + $size + 20px;
+		z-index: 4;
 
 		&:checked ~ .testimonial-box .testimonial-3{
 			opacity: 1;
@@ -58,7 +61,8 @@
 	top: 0;
 	left: 0;
 	transition: opacity .2s linear .1s;
-
+	z-index: 1;
+	
 	> * {
 		font-size: initial;
 	}

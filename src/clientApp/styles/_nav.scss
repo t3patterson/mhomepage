@@ -1,0 +1,79 @@
+.nav {
+	position: fixed;
+	top: 0; left: 0;
+	z-index: 1000;
+	width: 100%;
+}
+
+	.nav__logo-container{
+		background-color: $muktek-blue;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		font-size: 50px;
+		color: #fff;
+		padding: 10px;
+
+	}
+
+		.nav__logo{
+			width: 40px;
+		}
+
+	.nav__toggle-menu{
+		background: $gray-med;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		color: #fff;
+		width: 60px;
+		line-height: 60px;
+		height: 60px;
+		text-align: center;
+		border-radius: 50%;
+		border: 2px solid $muktek-blue;
+		cursor: pointer;
+	}
+
+		.nav__toggle-menu-icon{
+			font-size: 40px;
+		}
+
+	.nav__options-container{
+		margin-top: 70px;
+		display: block;
+		background-color: rgba(100,100,100,.8);
+		position: relative;
+		left: -120%;
+		opacity: 0;
+		transition: .4s all;
+		padding: 15px;
+		width: 300px;
+		border-left: 4px solid $muktek-orange;
+	}
+
+	.nav__option{
+		display: block;
+		padding: 10px;
+		margin-bottom: 5px;
+		background: $muktek-blue;
+		color: #fff;
+
+		&:hover{
+			color: $muktek-orange;
+		}
+	}
+
+	.nav__option--main-cat{
+		color: $gray-med;
+	}
+
+	.nav__option--sub-cat{
+		margin-left: 1.5rem;
+	}
+
+
+	.nav-options-container--menu-active{
+		opacity: 1;
+		left: 40px;
+	}
