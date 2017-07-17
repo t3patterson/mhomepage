@@ -6,23 +6,21 @@
 }
 
 	.nav__logo-container{
-		background-color: $muktek-blue;
-		position: absolute;
+		position: fixed;
 		top: 5px;
 		right: 5px;
-		font-size: 50px;
 		color: #fff;
 		padding: 10px;
 
 	}
 
 		.nav__logo{
-			width: 40px;
+			width: 70px;
 		}
 
 	.nav__toggle-menu{
 		background: $gray-med;
-		position: absolute;
+		position: fixed;
 		top: 10px;
 		left: 10px;
 		color: #fff;
@@ -43,7 +41,7 @@
 		margin-top: 70px;
 		display: block;
 		background-color: rgba(100,100,100,.8);
-		position: relative;
+		position: absolute;
 		left: -120%;
 		opacity: 0;
 		transition: .4s all;

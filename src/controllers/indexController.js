@@ -12,6 +12,24 @@ function getAbout (req, res){
 	})
 }
 
+function getNosotros (req, res){
+	res.render('nosotros', {
+		pageName: 'Nosotros'
+	})
+}
+
+function getTerminos (req, res){
+	res.render('terminos', {
+		pageName: 'Terminos y Condiciones'
+	})
+}
+
+function getPrivacidad (req, res){
+	res.render('privacidad', {
+		pageName: 'Aviso de Privacidad'
+	})
+}
+
 function makeProxyRequest(req, res) {
 	axios.get(`${req.query.api}`).then((serverRes)=>{
 		return res.json(serverRes.data).status(200)
@@ -22,5 +40,8 @@ function makeProxyRequest(req, res) {
 module.exports = {
 	getIndex,
 	getAbout,
+	getNosotros,
+	getTerminos,
+	getPrivacidad,
 	makeProxyRequest
 }
