@@ -3,7 +3,6 @@ let navbarOptions = document.getElementById('navbar-options')
 
 // Navbar Code
 function handleNavToggle(){
-
   console.log(navToggler)
   if(navToggler.classList.contains('nav__toggle-menu--menu-active')){
     navToggler.classList.remove('nav__toggle-menu--menu-active')

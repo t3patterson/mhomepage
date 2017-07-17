@@ -7,6 +7,11 @@
 	background: $gray-feint;
 }
 
+.section--definition {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
 
 .section__inner{
 	@include inner-container();

@@ -4,7 +4,13 @@
 
 	<body>
 		<div id="app-container">
-			<h2>About page</h2>
+			<%- include partials/nav.ejs %>
+			<%- include partials/about__header.ejs %>
+			<%- include partials/about__definition.ejs %>
+			<%- include partials/about__extended-description.ejs %>
+			<%- include partials/about__our-commitment.ejs %>
+			<%- include partials/footer.ejs %>
+
 		</div>
 		<script src="./js/bundle.js"></script>
 	</body>
