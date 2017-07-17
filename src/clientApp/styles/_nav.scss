@@ -31,7 +31,15 @@
 		border-radius: 50%;
 		border: 2px solid $muktek-blue;
 		cursor: pointer;
+		transition: .3s all;
+		&:hover{
+			background: $muktek-coolblue;
+		}
 	}
+
+		.nav__toggle-menu--menu-active {
+			background: $muktek-orange;
+		}
 
 		.nav__toggle-menu-icon{
 			font-size: 40px;
@@ -63,7 +71,11 @@
 	}
 
 	.nav__option--main-cat{
+
 		color: $gray-med;
+		&:hover{
+			color: $gray-med;
+		}
 	}
 
 	.nav__option--sub-cat{
