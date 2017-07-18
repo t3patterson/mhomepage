@@ -9,6 +9,7 @@ $gray-dark: #666;
 $transparent-black: rgba(50, 50, 50, .4);
 $black: #333333;
 
+$tablet-screen-size: 768px;
 
 @mixin absolute-center(){
 	position: absolute;
@@ -27,17 +28,23 @@ $black: #333333;
 	font-weight: 200;
 }
 
+
+
+@mixin mediaquery($size){
+	@media screen and (min-width: $size){
+		@content;
+	}
+}
+
 @mixin inner-container($size: 1200px){
 	max-width: $size;
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1100px;
-	padding: 0 40px;
-}
+	padding: 0 1rem;
 
-@mixin mediaquery($size){
-	@media screen and (min-width: $size){
-		@content;
+	@include mediaquery($tablet-screen-size){
+		padding: 0 2rem;
 	}
 }
 
@@ -159,52 +166,18 @@ button.button--alt{
 
 .link--block{
 	display: block;
-	color: initial;
+	color: inherit;
 }
 
-.standard__title{
-	color: $gray-dark;
+.standard{
+	padding: 1rem;
 }
 
-.standard__description{
-	color: $gray-med;
-}
-
-@import './landing';
-@import './feature';
-@import './section';
-@import './major-product';
-@import './testimonial';
-@import './footer';
-@import './nav';
-@import './header';
-
-.muktek-definition{
-	text-align: left;
-	margin-bottom: 0;
-	margin: 0 auto;
-}
-
-.muktek-definition {
-	text-align: left;
-	margin-bottom: 0;
-	margin: 0 auto;
-}
-
-
-	.muktek-word {
-		font-size: 3rem;
-		margin: 0;
+	.standard__title{
+		color: $gray-dark;
 	}
 
-	.muktek-word-def {
-		margin: .25rem 0 1.5rem 0;
-	}
-
-	.muktek-root {
-		text-align: left;
-		margin: 0 0 1rem 0;
-		padding-left: 1rem;
+	.standard__description{
 		color: $gray-med;
 	}
 
@@ -219,6 +192,12 @@ button.button--alt{
 		color: $gray-dark;
 	}
 
-.standard{
-	padding: 1rem;
-}
+
+@import './landing';
+@import './feature';
+@import './section';
+@import './major-product';
+@import './testimonial';
+@import './footer';
+@import './nav';
+@import './header';

@@ -1,12 +1,9 @@
+require('dotenv').config({ path: 'variables.env' })
+
+
 //IMPORTS
 //import webpack + webpack middleware;
 const chalk = require('chalk')
-const PROJECT_NAME = require('./config/projectName.js')
-
-if(typeof PROJECT_NAME !== 'string' ){
-	require('./src/cli/setProjectName.js')
-	throw new Error(`\n${chalk.bgRed.bold('There must be a project name exported from :')} ${chalk.grey.bold('./src/config/projectName.js')} \n ${chalk.bgWhite.black(' you must execute: ')} ${chalk.cyan.bold('npm run set-project-name')}` )
-}
 
 const	bodyParser = require('body-parser')
 const express = require('express') //import express web server
@@ -32,8 +29,7 @@ app.use(bodyParser.json())
 
 
 // set port if exists in environment for heroku or live site, else set to 3000 for dev
-const PORT = process.env.PORT || 3000
-app.set('port', PORT)
+app.set('port', process.env.PORT)
 
 
 //CONFIGURING TEMPLATING ENGINE FOR .HTML
@@ -61,9 +57,9 @@ app.use(render404)
 //EXECUTION SCRIPTS
 //---------------------
 //Connect to DB
-connectToDB(PROJECT_NAME)
+connectToDB(process.env.DATABASE_URL)
 
 //Tell Server to listen @ port-location
-app.listen(PORT, function() {
-	console.log(chalk.bold.bgGreen(` App listening on http://localhost:${PORT} `))
+app.listen(process.env.PORT, function() {
+	console.log(chalk.bold.bgGreen(` App listening on http://localhost:${process.env.PORT} `))
 })

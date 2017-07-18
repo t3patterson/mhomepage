@@ -1,6 +1,16 @@
 .header {
 	@include muktek-gradient();
-	padding: 50px 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 50px;
+
+	@include mediaquery(0px){
+		padding-top: 80px;
+	}
+
+	@include mediaquery($tablet-screen-size){
+		padding-top: 50px;
+	}
 }
 
 	.header__content{

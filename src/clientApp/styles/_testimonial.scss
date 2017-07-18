@@ -1,15 +1,24 @@
 .testimonial-box{
 	position: relative;
-	height: 310px;
+	@include mediaquery(0px){
+		height: 380px;
+	}
 
+	@include mediaquery($tablet-screen-size){
+		height: 310px;
+	}
 }
 
 .testimonial-toggler{
-	$size: 20px;
-	width: 20px;
-	height: 20px;
+	$size: 25px;
+	width: $size;
+	height: $size;
 	position: absolute;
 	outline: 0;
+
+	&:hover{
+		cursor: pointer
+	}
 
 	&::before{
 		content: " ";
@@ -62,17 +71,26 @@
 	left: 0;
 	transition: opacity .2s linear .1s;
 	z-index: 1;
-	
+
 	> * {
 		font-size: initial;
 	}
 }
 
 .testimonial__img-container {
-	width: 150px;
 	position: relative;
-	display: inline-block;
-	vertical-align: middle
+	width: 150px;
+
+	@include mediaquery(0px){
+		display: block;
+		margin: 0 auto;
+	}
+
+	@include mediaquery($tablet-screen-size){
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0;
+	}
 }
 
 	.testimonial__img{
@@ -93,10 +111,19 @@
 	}
 
 .testimonial__copy{
-	display: inline-block;
-	vertical-align: middle;
-	width: calc(100% - 150px);
 	padding: 15px;
+	@include mediaquery(0px){
+		display: block;
+		text-align: center;
+	}
+
+	@include mediaquery($tablet-screen-size){
+		display: inline-block;
+		vertical-align: middle;
+		width: calc(100% - 150px);
+		text-align: left;
+
+	}
 }
 	.testimonial__text{
 		@include fontformat-small();
